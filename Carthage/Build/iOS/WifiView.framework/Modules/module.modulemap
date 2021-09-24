@@ -1,0 +1,11 @@
+framework module WifiView {
+  umbrella header "WifiView.h"
+
+  export *
+  module * { export * }
+}
+
+module WifiView.Swift {
+    header "WifiView-Swift.h"
+    requires objc
+}
