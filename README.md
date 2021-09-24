@@ -91,3 +91,47 @@ If you prefer not to use a dependency manager, you can integrate JDAlertControll
 > ```
 
 > And for Manuall install you dont need to import anything 
+
+- Init your view with  `WifiView` same as you initialize default `UIView`:
+```swift
+  let wifiView = WifiView()
+```
+
+Animation functions 
+```swift
+wifiView.startAnimating()
+```
+
+This function will animate once .. Every startAnimating function also have completion block 
+
+```swift
+wifiView.startAnimating(repeatCount: .infinity)
+```
+
+This function will run animation in loop until you stop it
+
+```swift
+wifiView.startAnimating(repeatCount: 2, fallback: .twoSignals)
+```
+This function will run twice and then fallback to two signals
+for signal strength we have enum with two cases 
+
+```swift
+enum SignalStrength: Int {
+    case twoSignals
+    case weak
+  }
+  ```
+ See the Demo Xcode project its easy to understand with proper comments on properties .. write me if you didn't get anything L060214@gmail.com
+  
+  Congratulations! You're done.
+  
+  ## Contributing
+
+I’d love to have help on this project. For small changes please [open a pull request](https://github.com/jwd-ali/WifiView/pulls), for larger changes please [open an issue](https://github.com/jwd-ali/WifiView/issues) first to discuss what you’d like to see.
+
+
+License
+-------
+
+JDAlertController is under [MIT](https://opensource.org/licenses/MIT). See [LICENSE](LICENSE) file for more info.
