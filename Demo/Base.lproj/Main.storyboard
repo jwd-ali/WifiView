@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-jj-xcS">
+                                <rect key="frame" x="20" y="54" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Single"/>
+                                    <segment title="continous"/>
+                                    <segment title="fallback 2"/>
+                                    <segment title="fallback 1"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="A8t-So-IL6"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-vF-ppa">
+                                <rect key="frame" x="0.0" y="772" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfp-hE-ACP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start Animation"/>
+                                        <connections>
+                                            <action selector="startAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCW-fl-lDf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-Ij-scE">
+                                        <rect key="frame" x="0.0" y="54" width="414" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Stop Animation"/>
+                                        <connections>
+                                            <action selector="stopAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Wd-b0-jVf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-FZ-LfD" customClass="WifiView" customModule="WifiView">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Omd-A7-ifR"/>
+                                    <constraint firstAttribute="height" constant="240" id="Vfi-3b-noa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gEq-jj-xcS" secondAttribute="trailing" constant="20" id="5y8-3x-52U"/>
+                            <constraint firstItem="rOF-FZ-LfD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Z9-MI-16N"/>
+                            <constraint firstItem="gEq-jj-xcS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DFp-br-Htk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C4f-vF-ppa" secondAttribute="bottom" id="KG5-5E-QkF"/>
+                            <constraint firstItem="rOF-FZ-LfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MKD-XH-bSw"/>
+                            <constraint firstItem="C4f-vF-ppa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V5H-1k-KBX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4f-vF-ppa" secondAttribute="trailing" id="hcZ-5u-3qd"/>
+                            <constraint firstItem="gEq-jj-xcS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="y8M-k2-iiU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wifiView" destination="rOF-FZ-LfD" id="3CM-Gj-YeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
