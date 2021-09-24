@@ -60,7 +60,6 @@
 		E37A4B1326FDDC5B00A5A6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37A4B1626FDDC5B00A5A6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37A4B1826FDDC5B00A5A6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E37A4B2926FDF22500A5A6BA /* carthage-build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "carthage-build.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +84,6 @@
 		E37A4AE226FDDB5600A5A6BA = {
 			isa = PBXGroup;
 			children = (
-				E37A4B2926FDF22500A5A6BA /* carthage-build.sh */,
 				E37A4AFA26FDDBB500A5A6BA /* Sources */,
 				E37A4B0926FDDC5900A5A6BA /* Demo */,
 				E37A4AED26FDDB5600A5A6BA /* Products */,
