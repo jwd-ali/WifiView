@@ -78,14 +78,14 @@ let package = Package(
 
 ### Manually
 
-If you prefer not to use a dependency manager, you can integrate JDAlertController into your project manually.
+If you prefer not to use a dependency manager, you can integrate WifiView into your project manually.
 
 - Add sources into your project:
   - Drag `Sources`
 
 ## Usage
 
-> If you are using any dependency manager (pods , carthage , package manager)to integrate JDAlertController. Import JDAlertController first:
+> If you are using any dependency manager (pods , carthage , package manager)to integrate WifiView. Import WifiView first:
 > ```swift
 > import WifiView
 > ```
@@ -134,4 +134,4 @@ I’d love to have help on this project. For small changes please [open a pull r
 License
 -------
 
-JDAlertController is under [MIT](https://opensource.org/licenses/MIT). See [LICENSE](LICENSE) file for more info.
+WifiView is under [MIT](https://opensource.org/licenses/MIT). See [LICENSE](LICENSE) file for more info.
